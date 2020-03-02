@@ -11,5 +11,13 @@ public class Main{
 
         boy.reverse2();
         boy.print();
+
+        Stack now = new Stack(10);
+        now.push(44);
+        now.push(78);
+        now.push(12);
+        now.push(33);
+        now.reverse3();
+        now.print();
     }
 }

@@ -41,6 +41,18 @@ public class Stack {
     }
     public void reverse3(){
         //use 1 stack and ont int
+        Stack s = new Stack(this.size);
+        int mySize = this.size;
+        for(int i=0;i<mySize;i++){
+            int temp = this.pop();
+            for(int j=0;j<mySize-i-1;j++){
+                s.push(this.pop());
+            }
+            this.push(temp);
+            while(s.isEmpty() == false){
+                this.push(s.pop());
+            }
+        }
     }
     public void print(){
         for(int i=size-1;i>=0;i--){
